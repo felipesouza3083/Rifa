@@ -1,0 +1,6 @@
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Segurança\bin\Debug\Rifa.Segurança.dll
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Segurança\bin\Debug\Rifa.Segurança.pdb
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Segurança\obj\Debug\Rifa.Segurança.csprojResolveAssemblyReference.cache
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Segurança\obj\Debug\Rifa.Segurança.csproj.CoreCompileInputs.cache
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Segurança\obj\Debug\Rifa.Segurança.dll
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Segurança\obj\Debug\Rifa.Segurança.pdb

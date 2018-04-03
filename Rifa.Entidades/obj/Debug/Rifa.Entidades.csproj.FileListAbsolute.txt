@@ -1,0 +1,6 @@
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Entidades\bin\Debug\Rifa.Entidades.dll
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Entidades\bin\Debug\Rifa.Entidades.pdb
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.dll
+C:\Users\felipe.souza\source\repos\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.pdb

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Entidades", "0 - Entidades", "{ED2F19E5-B130-43DD-9114-72D7FA7C9A0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Sistema", "1 - Sistema", "{7DA58BB9-E046-4778-B49C-20D694E9E5FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - Camada de Apresentação", "1.1 - Camada de Apresentação", "{FD9687B5-CEFE-4891-8C15-B30FFC93AE23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 - Camada de Acesso a Dados", "1.2 - Camada de Acesso a Dados", "{48585615-8B0C-4BEF-B0A5-3975C7E259EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rifa.Entidades", "Rifa.Entidades\Rifa.Entidades.csproj", "{41EF5177-5AC4-4308-A4A3-C6500CC391CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rifa.DAL", "Rifa.DAL\Rifa.DAL.csproj", "{1B2C0F97-A84E-4F62-B0B0-C38C9E0BFFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rifa.WEB", "Rifa.WEB\Rifa.WEB.csproj", "{9E7C56F8-C7A4-463E-BE51-1D99A2C9DF84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Segurança", "2 - Segurança", "{FD9E25BB-5E8D-4C58-BCFC-BA0F4A01B0BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rifa.Segurança", "Rifa.Segurança\Rifa.Segurança.csproj", "{AC95F642-1EF7-4ECF-AAD9-58E7C62A0DE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41EF5177-5AC4-4308-A4A3-C6500CC391CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41EF5177-5AC4-4308-A4A3-C6500CC391CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41EF5177-5AC4-4308-A4A3-C6500CC391CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41EF5177-5AC4-4308-A4A3-C6500CC391CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2C0F97-A84E-4F62-B0B0-C38C9E0BFFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2C0F97-A84E-4F62-B0B0-C38C9E0BFFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2C0F97-A84E-4F62-B0B0-C38C9E0BFFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2C0F97-A84E-4F62-B0B0-C38C9E0BFFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7C56F8-C7A4-463E-BE51-1D99A2C9DF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7C56F8-C7A4-463E-BE51-1D99A2C9DF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7C56F8-C7A4-463E-BE51-1D99A2C9DF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7C56F8-C7A4-463E-BE51-1D99A2C9DF84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC95F642-1EF7-4ECF-AAD9-58E7C62A0DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC95F642-1EF7-4ECF-AAD9-58E7C62A0DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC95F642-1EF7-4ECF-AAD9-58E7C62A0DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC95F642-1EF7-4ECF-AAD9-58E7C62A0DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD9687B5-CEFE-4891-8C15-B30FFC93AE23} = {7DA58BB9-E046-4778-B49C-20D694E9E5FC}
+		{48585615-8B0C-4BEF-B0A5-3975C7E259EF} = {7DA58BB9-E046-4778-B49C-20D694E9E5FC}
+		{41EF5177-5AC4-4308-A4A3-C6500CC391CF} = {ED2F19E5-B130-43DD-9114-72D7FA7C9A0A}
+		{1B2C0F97-A84E-4F62-B0B0-C38C9E0BFFCC} = {48585615-8B0C-4BEF-B0A5-3975C7E259EF}
+		{9E7C56F8-C7A4-463E-BE51-1D99A2C9DF84} = {FD9687B5-CEFE-4891-8C15-B30FFC93AE23}
+		{AC95F642-1EF7-4ECF-AAD9-58E7C62A0DE7} = {FD9E25BB-5E8D-4C58-BCFC-BA0F4A01B0BE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2893FC2A-932F-4610-BDBE-E98CC4DABB1B}
+	EndGlobalSection
+EndGlobal

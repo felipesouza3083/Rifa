@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rifa</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body class="container">
+    <h2>Sistema de Controle e Sorteio de Rifas</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>@ViewBag.Title</h4>
+            <span>@ViewBag.SubTitle</span>
+            <hr />
+            <br />
+            
+
+
+            @RenderBody()
+
+        </div>
+
+    </div>
+
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
