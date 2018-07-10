@@ -55,9 +55,7 @@ namespace Rifa.Repositorio.Mappings
                                     ("ix_Foto")
                                     { IsUnique = true }));
 
-            HasRequired(u => u.Perfil)
-              .WithMany(p => p.Usuarios)
-              .Map(m => m.MapKey("IdPerfil"));
+            
 
         }
     }
