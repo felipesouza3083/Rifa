@@ -1,0 +1,13 @@
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Repositorio.dll.config
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Repositorio.dll
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Repositorio.pdb
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Entidades.dll
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Entidades.pdb
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.dll
+C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.pdb
