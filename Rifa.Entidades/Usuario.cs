@@ -15,7 +15,8 @@ namespace Rifa.Entidades
         public string Senha { get; set; }
         public string Foto { get; set; }
         public DateTime DataCadastro { get; set; }
-        
+
+        public int IdPerfil { get; set; }
         public Perfil Perfil { get; set; }
 
         public Usuario()

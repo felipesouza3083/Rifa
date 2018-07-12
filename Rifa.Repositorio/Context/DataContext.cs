@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using Rifa.Entidades;
 using Rifa.Repositorio.Mappings;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Configuration;
 
 namespace Rifa.Repositorio.Context
 {
     public class DataContext : DbContext
     {
         public DataContext()
-            : base(/*TODO*/)
+            : base(ConfigurationManager.ConnectionStrings["RIFA"].ConnectionString)
         {
 
         }

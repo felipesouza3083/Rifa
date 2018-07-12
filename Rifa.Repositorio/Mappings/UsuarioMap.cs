@@ -35,7 +35,11 @@ namespace Rifa.Repositorio.Mappings
             Property(u => u.Login)
                 .HasColumnName("Login")
                 .HasMaxLength(50)
-                .IsRequired();
+                .IsRequired()
+                .HasColumnAnnotation(IndexAnnotation.AnnotationName,
+                                     new IndexAnnotation(new IndexAttribute
+                                    ("ix_Login")
+                                     { IsUnique = true }));
 
             Property(u => u.Senha)
                 .HasColumnName("Senha")
@@ -55,8 +59,7 @@ namespace Rifa.Repositorio.Mappings
                                     ("ix_Foto")
                                     { IsUnique = true }));
 
-            
-
+            HasRequired(u => u.Perfil).WithMany(p => p.Usuarios).HasForeignKey(u => u.IdPerfil).WillCascadeOnDelete(false);
         }
     }
 }
