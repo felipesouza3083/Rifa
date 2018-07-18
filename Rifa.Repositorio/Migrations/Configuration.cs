@@ -19,7 +19,7 @@ namespace Rifa.Repositorio.Migrations
 
         protected override void Seed(Rifa.Repositorio.Context.DataContext context)
         {
-            context.Perfil.AddOrUpdate(
+            /*context.Perfil.AddOrUpdate(
                 new Perfil { IdPerfil = 1, NomePerfil = "Adminstrador",
                              Usuarios = new List<Usuario> {
                                  new Usuario
@@ -34,6 +34,22 @@ namespace Rifa.Repositorio.Migrations
                              }
                 },
                 new Perfil { IdPerfil = 2, NomePerfil = "Comum" }
+                );*/
+            context.Perfil.AddOrUpdate(
+                new Perfil{IdPerfil = 1,NomePerfil = "Adminstrador"},
+                new Perfil { IdPerfil = 2, NomePerfil = "Comum" }
+            );
+            context.Usuario.AddOrUpdate(
+                new Usuario
+                {
+                    IdUsuario = 1,
+                    Nome = "Felipe Souza",
+                    Email = "felipearaujosouza@hotmail.com",
+                    Login = "felipe.souza",
+                    Senha = Criptografia.EncriptarSenhaMD5("cd3083"),
+                    DataCadastro = DateTime.Now,
+                    IdPerfil = 1
+                }
                 );
         }
     }
