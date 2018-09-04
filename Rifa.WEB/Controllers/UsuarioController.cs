@@ -29,6 +29,102 @@ namespace Rifa.WEB.Controllers
         }
 
         [HttpPost]
+        public ActionResult Login(UsuarioLoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    Usuario u = repository.Find(model.Login, Criptografia.EncriptarSenhaMD5(model.Senha));
+                    if (u != null)
+                    {
+                        UsuarioAutenticadoViewModel auth = new UsuarioAutenticadoViewModel();
+
+                        auth.IdUsuario = u.IdUsuario;
+                        auth.Nome = u.Nome;
+                        auth.Login = u.Login;
+                        auth.DataHoraAcesso = DateTime.Now;
+
+                        //converter o objeto para JSON..
+                        string authJSON = JsonConvert.SerializeObject(auth);
+
+                        //criar o ticket de acesso..
+                        FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(authJSON, false, 5);
+
+                        //gravar o ticket em cookie..
+                        HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket));
+
+                        Response.Cookies.Add(cookie);
+
+                        //return Json(new { redirectTo = Url.Action("Index", "Principal", new { area = "RestrictArea" }), }, JsonRequestBehavior.AllowGet);
+                        return RedirectToAction("Index", "Home",
+                                                   new { area = "AreaRestrita" });
+                    }
+                    else
+                    {
+                        ViewBag.Mensagem = "Acesso negado. Usuário não encontrado.";
+                    }
+                }
+                catch (Exception e)
+                {
+                    ViewBag.Mensagem = e.Message;
+                }
+            }
+
+            return View();
+        }
+
+        // GET: Usuario/Cadastro
+        public ActionResult Cadastro()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Cadastro(UsuarioCadastroViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (repository.HasLogin(model.Login))
+                    {
+                        ViewBag.Mensagem = $"O login {model.Login} já foi cadastrado. Tente outro.";
+                    }
+                    else
+                    {
+                        Usuario u = new Usuario();
+
+                        u.Nome = model.Nome;
+                        u.Email = model.Email;
+                        u.Login = model.Login;
+                        u.Senha = Criptografia.EncriptarSenhaMD5(model.Senha);
+                        u.Foto = Guid.NewGuid().ToString() + Path.GetExtension(model.Foto.FileName);
+                        u.DataCadastro = DateTime.Now;
+                        u.IdPerfil = 2;
+
+                        repository.Insert(u);
+
+
+                        //upload da foto..
+                        string path = Server.MapPath("/Imagens/");
+                        model.Foto.SaveAs(path + u.Foto);
+
+                        ViewBag.Mensagem = $"Usuário {u.Nome}, cadastrado com sucesso.";
+                        ModelState.Clear(); //limpar os campos do formulário..
+                        return RedirectToAction("Login", "Usuario");
+                    }
+                }
+                catch (Exception e)
+                {
+                    ViewBag.Mensagem = $"Ocorreu um erro:{e.Message}";
+                }
+            }
+            return View();
+        }
+
+        [HttpPost]
         public void SalvarFoto()
         {
             for (int i = 0; i < Request.Files.Count; i++)
@@ -41,84 +137,6 @@ namespace Rifa.WEB.Controllers
                 file.SaveAs(path);
             }
 
-        }
-
-        [HttpPost]
-        public JsonResult CadastrarUsuario(UsuarioCadastroViewModel model)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    if (repository.HasLogin(model.Login))
-                    {
-                        return Json("Login já cadastrado na base de dados!");
-                    }
-                    else
-                    {
-                        Usuario u = new Usuario();
-
-                        u.Nome = model.Nome;
-                        u.Email = model.Email;
-                        u.Login = model.Login;
-                        u.Senha = Criptografia.EncriptarSenhaMD5(model.Senha);
-                        u.Foto = model.Foto;
-                        u.DataCadastro = DateTime.Now;
-                        u.IdPerfil = model.IdPerfil;
-
-                        repository.Insert(u);
-
-                        return Json("Usuario Cadastrado com sucesso!");
-                    }
-                }
-                else
-                {
-                    return Json(ModelState);
-                }
-            }
-            catch (Exception e)
-            {
-                return Json($"Ocorreu um erro:{e.Message}");
-            }
-        }
-
-        [HttpPost]
-        public JsonResult AutenticarUsuario(UsuarioLoginViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                Usuario u = repository.Find(model.Login, Criptografia.EncriptarSenhaMD5(model.Senha));
-                if (u != null)
-                {
-                    UsuarioAutenticadoViewModel auth = new UsuarioAutenticadoViewModel();
-
-                    auth.IdUsuario = u.IdUsuario;
-                    auth.Nome = u.Nome;
-                    auth.Login = u.Login;
-                    auth.DataHoraAcesso = DateTime.Now;
-
-                    //converter o objeto para JSON..
-                    string authJSON = JsonConvert.SerializeObject(auth);
-
-                    //criar o ticket de acesso..
-                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(authJSON, false, 5);
-
-                    //gravar o ticket em cookie..
-                    HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket));
-
-                    Response.Cookies.Add(cookie);
-
-                    return Json(new { redirectTo = Url.Action("Index", "Principal", new { area = "RestrictArea" }), }, JsonRequestBehavior.AllowGet);
-                }
-                else
-                {
-                    return Json("Usuário e Senha incorretos.");
-                }
-            }
-            else
-            {
-                return Json(ModelState);
-            }
         }
 
         public ActionResult Logout()

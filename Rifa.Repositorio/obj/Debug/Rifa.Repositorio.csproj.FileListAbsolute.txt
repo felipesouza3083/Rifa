@@ -11,3 +11,17 @@ C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositori
 C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.csproj.CoreCompileInputs.cache
 C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.dll
 C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.pdb
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Repositorio.dll.config
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Repositorio.dll
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Repositorio.pdb
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.dll
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Entidades.dll
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\Rifa.Entidades.pdb
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.xml
+C:\Git_Projects\Rifa\Rifa.Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git_Projects\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.csprojAssemblyReference.cache
+C:\Git_Projects\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.csproj.CoreCompileInputs.cache
+C:\Git_Projects\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.csproj.CopyComplete
+C:\Git_Projects\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.dll
+C:\Git_Projects\Rifa\Rifa.Repositorio\obj\Debug\Rifa.Repositorio.pdb

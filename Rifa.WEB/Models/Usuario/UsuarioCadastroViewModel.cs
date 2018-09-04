@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rifa.WEB.Validations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,16 +19,16 @@ namespace Rifa.WEB.Models.Usuario
         public string Login { get; set; }
 
         [Required(ErrorMessage = "Informe a senha.")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
 
         [Compare("Senha", ErrorMessage = "Senhas não conferem.")]
         [Required(ErrorMessage = "Informe a Confirmação da senha.")]
+        [DataType(DataType.Password)]
         public string ConfirmSenha { get; set; }
 
         [Required(ErrorMessage = "Envie a foto.")]
-        public string Foto { get; set; }
-
-        [Required(ErrorMessage = "Informe o perfil.")]
-        public int IdPerfil { get; set; }
+        [UploadFotoValidation(ErrorMessage = "Por favor, envie apenas imagens jpg ou png.")]
+        public HttpPostedFileBase Foto { get; set; }
     }
 }

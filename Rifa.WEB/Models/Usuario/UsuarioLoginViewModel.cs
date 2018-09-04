@@ -9,9 +9,11 @@ namespace Rifa.WEB.Models.Usuario
     public class UsuarioLoginViewModel
     {
         [Required(ErrorMessage = "Informe o login")]
+        [Display(Name = "Login do Usuário:")]
         public string Login { get; set; }
 
         [Required(ErrorMessage = "Informe a senha")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
     }
 }

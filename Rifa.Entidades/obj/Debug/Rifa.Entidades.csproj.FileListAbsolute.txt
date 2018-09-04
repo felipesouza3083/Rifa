@@ -4,3 +4,9 @@ C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.cs
 C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.dll
 C:\Users\Felipe\Documents\GitHub\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.pdb
+C:\Git_Projects\Rifa\Rifa.Entidades\bin\Debug\Rifa.Entidades.dll
+C:\Git_Projects\Rifa\Rifa.Entidades\bin\Debug\Rifa.Entidades.pdb
+C:\Git_Projects\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.csprojAssemblyReference.cache
+C:\Git_Projects\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.csproj.CoreCompileInputs.cache
+C:\Git_Projects\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.dll
+C:\Git_Projects\Rifa\Rifa.Entidades\obj\Debug\Rifa.Entidades.pdb
